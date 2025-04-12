@@ -57,8 +57,7 @@ function drawApple(x, y) {
     ctx.strokeRect(x, y, cellSize, cellSize)
 }
 
-function execute(){
-
+function move() {
     if (direction == 0) {
         tempY = tempY - 1
     }
@@ -71,20 +70,31 @@ function execute(){
     if (direction == 3) {
         tempX = tempX - 1
     }
+}
+
+/*function myFunction(index) {
+    if (index == tempX) {
+        console.log(index);
+    }
+}*/
+
+function execute() {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    move();
+
     drawGrid();
 
-
-
-    drawSnake(cords[tempX].j*40, cords[tempY].j*40);
+    drawSnake(tempX*40, tempY*40);
     if (tempY == tempY2 && tempX == tempX2) {
         tempX2 = Math.floor(Math.random() * 17);
         tempY2 = Math.floor(Math.random() * 17);
         console.log("ate apple");
     }
     drawApple(tempX2*40, tempY2*40);
+/*    cords.x.findIndex(myFunction);
+    myFunction();*/
 //    console.log(cords);
 }
 
