@@ -1,5 +1,4 @@
 // WASD управление
-// если выйти за граници, то игра багнется
 
 let scoreText = document.getElementById('scoreT');
 
