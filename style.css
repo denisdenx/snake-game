@@ -45,4 +45,17 @@ footer{
 .pointsdiv{
     display: flex;
     gap: 25px;
+    width: 20%;
+}
+/*
+.gameName{
+    gap: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.gameNameDiv{
+    gap: 100px;
+    display: flex;
+    justify-content: center;
 }
